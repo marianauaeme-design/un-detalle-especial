@@ -84,8 +84,9 @@
 
     h1 {
       color: #1e3c72;
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       margin-bottom: 15px;
+      line-height: 1.3;
     }
 
     p {
@@ -112,12 +113,12 @@
 
     .dots {
       display: flex;
-      gap: 8px;
+      gap: 6px;
     }
 
     .dot {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       background: #cbd5e1;
       border-radius: 50%;
       transition: all 0.3s ease;
@@ -125,7 +126,7 @@
 
     .dot.active {
       background: #1e3c72;
-      width: 22px;
+      width: 18px;
       border-radius: 10px;
     }
 
@@ -156,51 +157,55 @@
       <div class="cake-icon">🎂</div>
       <span class="badge">Un día para celebrar</span>
       <h1>¡Feliz Cumpleaños, Sonia Bonita!</h1>
-      <p> Hoy el día amanece más bonito porque celebramos un día sumamente especial: su cumpleaños. Le preparé este pequeño detalle con mucho cariño.🌷</p>
+      <p>Hoy el día amanece más bonito porque celebramos un día sumamente especial: su cumpleaños. Le preparé este pequeño detalle con mucho cariño. 🌷</p>
     </div>
 
     <!-- Slide 2: Cualidades y admiración -->
     <div class="slide" id="slide2">
       <div class="cake-icon">✨</div>
-      <span class="badge">Mis mejores deseos de todo corazón</span>
+      <span class="badge">Mis mejores deseos</span>
       <h1>Mucha Salud</h1>
       <p>Su dedicación, su paciencia infinita, la elegancia de sus detalles y la luz tan bonita que le pone a todo lo que hace son realmente inspiradoras.</p>
     </div>
 
-    <!-- Slide 3: Deseos para el nuevo año -->
+    <!-- Slide 3: Deseos de Serenidad -->
     <div class="slide" id="slide3">
-      <div class="cake-icon">💐</div>
-      <span class="badge">MIS MEJORES DESEOS</span>
+      <div class="cake-icon">🌿</div>
+      <span class="badge">Bienestar & Paz</span>
       <h1>Un año grandioso</h1>
       <p>Que este nuevo año de vida venga colmado de energía, serenidad y bienestar para disfrutar cada instante al máximo.</p>
     </div>
 
-      <!-- Slide 3: Deseos para el nuevo año -->
-    <div class="slide" id="slide3">
-      <div class="cake-icon">💐</div>
+    <!-- Slide 4: Sonrisas -->
+    <div class="slide" id="slide4">
+      <div class="cake-icon">😊</div>
       <span class="badge">Infinitas Sonrisas</span>
+      <h1>Momentos Hermosos</h1>
       <p>Que nunca le falten motivos para sonreír y que viva momentos hermosos rodeada de risas y alegría sincera.</p>
     </div>
 
-        <!-- Slide 3: Deseos para el nuevo año -->
-    <div class="slide" id="slide3">
+    <!-- Slide 5: Éxitos -->
+    <div class="slide" id="slide5">
       <div class="cake-icon">💐</div>
       <span class="badge">Muchísimos Éxitos</span>
-      <p>Que cada meta y proyecto que emprenda florezca con grandiosos logros y todas las bendiciones que que se merece.</p>
+      <h1>Grandes Logros</h1>
+      <p>Que cada meta y proyecto que emprenda florezca con grandiosos logros y todas las bendiciones que se merece.</p>
     </div>
 
-    <!-- Slide 4: Cierre cariñoso -->
-    <div class="slide" id="slide4">
+    <!-- Slide 6: Cierre cariñoso -->
+    <div class="slide" id="slide6">
       <div class="cake-icon">💖</div>
-      <span class="badge">Con todo mi cariñoL</span>
-      <h1>¡Que este nuevo ciclo que comienza esté repleto de sorpresas maravillosas y momentos inolvidables!</h1>
+      <span class="badge">Con todo mi cariño</span>
+      <h1>¡Que este nuevo ciclo esté repleto de sorpresas maravillosas!</h1>
       <p>Espero que pase un día maravilloso rodeada de mucho cariño. <br><br><span class="highlight">¡Le mando un abrazo gigante con muchísimo afecto! ✨</span></p>
     </div>
 
-    <!-- Botones y Puntos de Navegación -->
+    <!-- Botones y Puntos de Navegación (6 puntos para 6 slides) -->
     <div class="nav-controls">
       <div class="dots">
         <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
@@ -212,7 +217,7 @@
 
   <script>
     let currentSlide = 1;
-    const totalSlides = 4;
+    const totalSlides = 6; // Ajustado a las 6 diapositivas actuales
 
     function nextSlide() {
       // Ocultar slide actual
@@ -226,7 +231,7 @@
         document.getElementById(`slide${currentSlide}`).classList.add('active');
         document.querySelectorAll('.dot')[currentSlide - 1].classList.add('active');
 
-        // Si es el último slide, lanzar confeti y cambiar botón
+        // Si es el último slide, lanzar confeti y cambiar texto del botón
         if (currentSlide === totalSlides) {
           document.getElementById('nextBtn').innerText = '¡Felicidades! 🎉';
           
@@ -252,7 +257,7 @@
           }, 400);
         }
       } else {
-        // Reiniciar al inicio si vuelve a presionar
+        // Reiniciar al inicio si vuelve a presionar al final
         currentSlide = 1;
         document.getElementById(`slide${currentSlide}`).classList.add('active');
         document.querySelectorAll('.dot')[currentSlide - 1].classList.add('active');
