@@ -163,15 +163,15 @@
     <!-- Slide 2: Cualidades y admiración -->
     <div class="slide" id="slide2">
       <div class="cake-icon">✨</div>
-      <span class="badge">Mis mejores deseos</span>
+      <span class="badge">Mis mejores deseos de todo corazón</span>
       <h1>Mucha Salud</h1>
       <p>Su dedicación, su paciencia infinita, la elegancia de sus detalles y la luz tan bonita que le pone a todo lo que hace son realmente inspiradoras.</p>
     </div>
 
-    <!-- Slide 3: Deseos de Serenidad -->
+    <!-- Slide 3: Deseos para el nuevo año -->
     <div class="slide" id="slide3">
-      <div class="cake-icon">🌿</div>
-      <span class="badge">Bienestar & Paz</span>
+      <div class="cake-icon">💐</div>
+      <span class="badge">MIS MEJORES DESEOS</span>
       <h1>Un año grandioso</h1>
       <p>Que este nuevo año de vida venga colmado de energía, serenidad y bienestar para disfrutar cada instante al máximo.</p>
     </div>
@@ -186,7 +186,7 @@
 
     <!-- Slide 5: Éxitos -->
     <div class="slide" id="slide5">
-      <div class="cake-icon">💐</div>
+      <div class="cake-icon">🌟</div>
       <span class="badge">Muchísimos Éxitos</span>
       <h1>Grandes Logros</h1>
       <p>Que cada meta y proyecto que emprenda florezca con grandiosos logros y todas las bendiciones que se merece.</p>
@@ -196,11 +196,11 @@
     <div class="slide" id="slide6">
       <div class="cake-icon">💖</div>
       <span class="badge">Con todo mi cariño</span>
-      <h1>¡Que este nuevo ciclo esté repleto de sorpresas maravillosas!</h1>
+      <h1>¡Que este nuevo ciclo que comienza esté repleto de sorpresas maravillosas y momentos inolvidables!</h1>
       <p>Espero que pase un día maravilloso rodeada de mucho cariño. <br><br><span class="highlight">¡Le mando un abrazo gigante con muchísimo afecto! ✨</span></p>
     </div>
 
-    <!-- Botones y Puntos de Navegación (6 puntos para 6 slides) -->
+    <!-- Botones y Puntos de Navegación -->
     <div class="nav-controls">
       <div class="dots">
         <div class="dot active"></div>
@@ -217,7 +217,7 @@
 
   <script>
     let currentSlide = 1;
-    const totalSlides = 6; // Ajustado a las 6 diapositivas actuales
+    const totalSlides = 6;
 
     function nextSlide() {
       // Ocultar slide actual
@@ -231,7 +231,7 @@
         document.getElementById(`slide${currentSlide}`).classList.add('active');
         document.querySelectorAll('.dot')[currentSlide - 1].classList.add('active');
 
-        // Si es el último slide, lanzar confeti y cambiar texto del botón
+        // Si es el último slide, lanzar confeti y cambiar botón
         if (currentSlide === totalSlides) {
           document.getElementById('nextBtn').innerText = '¡Felicidades! 🎉';
           
@@ -257,7 +257,7 @@
           }, 400);
         }
       } else {
-        // Reiniciar al inicio si vuelve a presionar al final
+        // Reiniciar al inicio si vuelve a presionar
         currentSlide = 1;
         document.getElementById(`slide${currentSlide}`).classList.add('active');
         document.querySelectorAll('.dot')[currentSlide - 1].classList.add('active');
