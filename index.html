@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Feliz Cumpleaños! 🎂</title>
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #2c3e50 0%, #fd746c 60%, #ffb88c 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: #333;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 30px 25px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      backdrop-filter: blur(5px);
+    }
+
+    .sun-container {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(to top, #ff7e5f, #feb47b);
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 25px rgba(254, 180, 123, 0.8);
+      animation: pulse 3s infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.98); box-shadow: 0 0 15px rgba(254, 180, 123, 0.6); }
+      100% { transform: scale(1.05); box-shadow: 0 0 30px rgba(254, 180, 123, 0.9); }
+    }
+
+    .sun-icon {
+      font-size: 45px;
+    }
+
+    h1 {
+      color: #d35400;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      color: #7f8c8d;
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: linear-gradient(45deg, #ff7e5f, #feb47b);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 126, 95, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.96);
+    }
+
+    .letter-content {
+      display: none;
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 2px dashed #f39c12;
+      text-align: left;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      color: #444;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .badge {
+      display: inline-block;
+      background: #fff3e0;
+      color: #e67e22;
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="sun-container">
+      <span class="sun-icon">🌅</span>
+    </div>
+    
+    <span class="badge">10 DE SEPTIEMBRE</span>
+    <h1>¡Feliz Cumpleaños! 🎂</h1>
+    <p class="subtitle">Un pequeño detalle hecho con código, directo desde Toluca hasta Querétaro.</p>
+
+    <button class="btn" onclick="openMessage()">Abrir tu tarjeta ✨</button>
+
+    <div class="letter-content" id="letter">
+      <p>Mire, hoy el día amanece más bonito porque es un día muy especial: el día en que nació. 🌷</p><br>
+      <p>Quería desearle de todo corazón un año lleno de mucha salud, sonrisas, momentos hermosos y muchísimos éxitos en su vocación tan bonita enseñando día a día.</p><br>
+      <p>Espero que disfrute mucho su día rodeada de mucho cariño. ¡Le mando un abrazo gigante! 🎉✨</p>
+    </div>
+  </div>
+
+  <script>
+    function openMessage() {
+      // Muestra la carta
+      document.getElementById('letter').style.display = 'block';
+      
+      // Oculta el botón para evitar doble clic
+      document.querySelector('.btn').style.display = 'none';
+
+      // Lanza el efecto de confeti
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+
+      // Lanza una segunda ráfaga de confeti
+      setTimeout(() => {
+        confetti({
+          particleCount: 50,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 }
+        });
+        confetti({
+          particleCount: 50,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 }
+        });
+      }, 400);
+    }
+  </script>
+</body>
+</html>
