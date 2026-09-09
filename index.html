@@ -84,9 +84,8 @@
 
     h1 {
       color: #1e3c72;
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       margin-bottom: 15px;
-      line-height: 1.3;
     }
 
     p {
@@ -113,12 +112,12 @@
 
     .dots {
       display: flex;
-      gap: 6px;
+      gap: 8px;
     }
 
     .dot {
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
       background: #cbd5e1;
       border-radius: 50%;
       transition: all 0.3s ease;
@@ -126,7 +125,7 @@
 
     .dot.active {
       background: #1e3c72;
-      width: 18px;
+      width: 22px;
       border-radius: 10px;
     }
 
@@ -157,7 +156,7 @@
       <div class="cake-icon">🎂</div>
       <span class="badge">Un día para celebrar</span>
       <h1>¡Feliz Cumpleaños, Sonia Bonita!</h1>
-      <p>Hoy el día amanece más bonito porque celebramos un día sumamente especial: su cumpleaños. Le preparé este pequeño detalle con mucho cariño. 🌷</p>
+      <p> Hoy el día amanece más bonito porque celebramos un día sumamente especial: su cumpleaños. Le preparé este pequeño detalle con mucho cariño.🌷</p>
     </div>
 
     <!-- Slide 2: Cualidades y admiración -->
@@ -176,26 +175,24 @@
       <p>Que este nuevo año de vida venga colmado de energía, serenidad y bienestar para disfrutar cada instante al máximo.</p>
     </div>
 
-    <!-- Slide 4: Sonrisas -->
-    <div class="slide" id="slide4">
-      <div class="cake-icon">😊</div>
+    <!-- Slide 3: Deseos para el nuevo año -->
+    <div class="slide" id="slide3">
+      <div class="cake-icon">💐</div>
       <span class="badge">Infinitas Sonrisas</span>
-      <h1>Momentos Hermosos</h1>
       <p>Que nunca le falten motivos para sonreír y que viva momentos hermosos rodeada de risas y alegría sincera.</p>
     </div>
 
-    <!-- Slide 5: Éxitos -->
-    <div class="slide" id="slide5">
-      <div class="cake-icon">🌟</div>
+    <!-- Slide 3: Deseos para el nuevo año -->
+    <div class="slide" id="slide3">
+      <div class="cake-icon">💐</div>
       <span class="badge">Muchísimos Éxitos</span>
-      <h1>Grandes Logros</h1>
-      <p>Que cada meta y proyecto que emprenda florezca con grandiosos logros y todas las bendiciones que se merece.</p>
+      <p>Que cada meta y proyecto que emprenda florezca con grandiosos logros y todas las bendiciones que que se merece.</p>
     </div>
 
-    <!-- Slide 6: Cierre cariñoso -->
-    <div class="slide" id="slide6">
+    <!-- Slide 4: Cierre cariñoso -->
+    <div class="slide" id="slide4">
       <div class="cake-icon">💖</div>
-      <span class="badge">Con todo mi cariño</span>
+      <span class="badge">Con todo mi cariñoL</span>
       <h1>¡Que este nuevo ciclo que comienza esté repleto de sorpresas maravillosas y momentos inolvidables!</h1>
       <p>Espero que pase un día maravilloso rodeada de mucho cariño. <br><br><span class="highlight">¡Le mando un abrazo gigante con muchísimo afecto! ✨</span></p>
     </div>
@@ -207,8 +204,6 @@
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
       </div>
       <button class="btn" id="nextBtn" onclick="nextSlide()">Siguiente ➔</button>
     </div>
@@ -217,7 +212,7 @@
 
   <script>
     let currentSlide = 1;
-    const totalSlides = 6;
+    const totalSlides = 4;
 
     function nextSlide() {
       // Ocultar slide actual
